@@ -1,5 +1,5 @@
 let button = document.getElementsByClassName(".cta");
-button.addEventListener('click', advancedPalindrome);
+button.addEventListener("click", advancedPalindrome);
 
 const timerWatcher = document.querySelector(".timer-watch");
 const input = document.querySelector("input");
@@ -28,28 +28,53 @@ const startWatch = () => {
 
 startWatch();
 
+function addAnswer(text, isPalindrome) {
+  answers.push({ text, isPalindrome });
+}
 
-function advancedPalindrome(inputData){
-    // palindrome Number, intergerscheck and palindroms
-    function numberCheck (inputData){
-        // checks to see if the palindrom is a number
-        return !isNaN(inputData)
-    };
+function endGame() {
+  inputText.disabled = true;
+  checkBtn.disabled = true;
+  displayResults();
+}
 
-    function intergerscheck(inputData){
-        // checking for intergers 
-        return /^[0.9]*$/.test(inputData)
-    };
+function displayResults() {
+  let html = "<h3>Your Answers:</h3><ul>";
 
-    function palindrome(inputData){
-        // this function performs an operation to find out if the inputed word is a palindrom or not
-        inputData = inputData.replace(/[^a-z0-9]+/gi. **).toLowerCase();
+  answers.forEach((answer) => {
+    const result = answer.isPalindrome ? "Correct" : "Incorrect";
+    const color = answer.isPalindrome ? "green" : "red";
+    html += `<li style="color: ${color}">${answer.text} - ${result}</li>`;
+  });
 
-        let outputData = inputData.toString().split(**).reverse().join(**);
-        // converts input to string, splits individual elements of the sentence to an array, reverse the array.
-        // joins to reform one word and assigns final output to outputData variable.
-        return inputData === outputData ? true : true;
-    };
+  html += "</ul>";
+  resultsDiv.innerHTML = html;
+}
 
-    let value = document.get
+function advancedPalindrome(inputData) {
+  // palindrome Number, intergerscheck and palindroms
+  function numberCheck(inputData) {
+    // checks to see if the palindrom is a number
+    return !isNaN(inputData);
+  }
+
+  function intergerscheck(inputData) {
+    // checking for intergers
+    return /^[0.9]*$/.test(inputData);
+  }
+
+  function palindrome(inputData) {
+    // this function performs an operation to find out if the inputed word is a palindrom or not
+    inputData = inputData.replace(/[^a-z0-9]+/g, "").toLowerCase();
+
+    let outputData = inputData.toString().split("").reverse().join("");
+    // converts input to string, splits individual elements of the sentence to an array, reverse the array.
+    // joins to reform one word and assigns final output to outputData variable.
+    return inputData === outputData ? true : true;
+  }
+
+  let value = document.getElementById("palindrome-result");
+
+  inputData.preventDefault(inputData);
+  // prevents the default action by the Dom on clicking
 }
