@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: ;
+  --secondary-color: #4343ec;
+  --background-color: #000;
+  --background-color-two: #fff;
+  --font-size: 1rem;
+  --line-height: 24px;
+  --font-family-heading: "Palindrome-woff";
+  --font-family: system-ui, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --text-align: left;
+  --color: #fff;
+  --color-two: #000;
+  --text-align-center: center;
+  --outline: none;
+  --border: 1px solid #fff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
+.container {
+  width: 95%;
+  height: 90vh;
+  background-color: #000;
+  margin: 2em auto;
+  /* border: 1px solid #fff; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 28px;
+  padding: 1em 0.5em;
+}
+
+#item-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  padding: 1em 0.5em;
+}
+
+.main-title {
+  line-height: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-heading);
+  font-size: 2.5rem;
+  width: 100%;
+  text-align: var(--text-align-center);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: transparent;
+  color: var(--color);
+  gap: 0.5rem;
+  border: none;
+  text-decoration: underline;
+}
+
+.btn {
+  border: 1px solid var(--secondary-color);
+  text-decoration: none;
+}
+
+.cta {
+  border: 1px solid #fff;
+  text-decoration: none;
+}
+
+svg {
+  width: 16px;
+  height: 16px;
+}
+
+.btn :hover {
+  background-color: #2a2af9;
+  color: #fff;
+  font-weight: 600;
+}
+
+input {
+  border: 1px solid #fff;
+  outline: var(--outline);
+  padding: 1em;
+  width: 100%;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.input-field {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+a {
+  color: var(--color);
+  text-decoration: none;
+}

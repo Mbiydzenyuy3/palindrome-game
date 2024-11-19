@@ -7,18 +7,22 @@
     <link rel="stylesheet" href="./styles/app.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="item-wrapper">
+      <div class="timer">
+        <span class="timer-watch">3:00</span>
+      </div>
       <div class="input-field">
         <input
           type="text"
           id="user-word"
-          placeholder="Enter word that is a palindrome here..."
+          placeholder="Enter Palindrome words"
           required
         />
-        <button type="submit" class="cta" value="Check">Check</button>
+        <button type="submit" class="cta">Submit</button>
       </div>
-      <p class="result"></p>
-      <a href="app.html"><button class="button">Go Back</button></a>
+      <form class="result"></form>
+      <a href="app.html"><button class="button">Back to home</button></a>
     </div>
+    <script src="./javascript/app.js"></script>
   </body>
 </html>
